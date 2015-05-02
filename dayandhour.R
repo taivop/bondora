@@ -16,21 +16,26 @@ data5 = data %>%
   group_by(ApplicationSignedWeekday, ApplicationSignedHour) %>%
   summarise(count_total=n(), count_funded=sum(WasFunded)) %>%
   mutate(perc_funded=count_funded/count_total) %>%
-  select(ApplicationSignedWeekday, ApplicationSignedHour, count_funded) %>%
-  dcast(ApplicationSignedHour~ApplicationSignedWeekday) %>%
-  select(-ApplicationSignedHour)
+  mutate(`Kokku taotlusi`=count_total, `Rahastatud taotlusi`=count_funded,
+         `Rahastatud taotluste osakaal`=perc_funded)
 
-names(data5$ApplicationSignedWeekday) = weekday_labels
+
+# Plotting
+svg("time_heatmap.svg",width=10,height=6)
+bgcolor = "#000000"
 
 ggplot(data5, aes(ApplicationSignedWeekday, ApplicationSignedHour)) +
-  geom_tile(aes(fill = count_funded), colour = "white") +
-  scale_fill_gradient(low = "white", high = "red") +
-  scale_y_reverse() +
-  #scale_x_discrete(breaks=1:7, labels=weekday_labels) +
+  geom_tile(aes(fill = `Kokku taotlusi`), colour = bgcolor) +
+  scale_fill_gradient(low = "white", high = "#fc4e2a") +
+  scale_y_reverse(breaks=seq(0,23,3), expand=c(0.02, 0)) +
+  scale_x_discrete(breaks=1:7, labels=weekday_labels, limits=c(1:7), expand=c(0.02, 0)) +
+  ylab("Taotluse esitamise tund") +
+  xlab("Taotluse esitamise nädalapäev") + 
   theme_bw() +
   theme(panel.grid.minor = element_blank(), panel.grid.major = element_blank(),
-        text=element_text(size=16, family="Open Sans"))
+        text=element_text(size=16, family="Open Sans"),
+        panel.background=element_rect(fill=bgcolor))
 
-
+dev.off()
 
 
