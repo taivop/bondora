@@ -21,7 +21,7 @@ data5 = data %>%
 
 
 # Plotting
-svg("time_heatmap.svg",width=10,height=6)
+svg("figures/time_heatmap.svg",width=10,height=6)
 bgcolor = "#000000"
 
 ggplot(data5, aes(ApplicationSignedWeekday, ApplicationSignedHour)) +
