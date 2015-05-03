@@ -49,6 +49,9 @@ data3 = rbind(data3f, data3m) %>%
 
 
 # Plotting
+#svg("pyramid.svg")
+png("pyramid.png", width=800, height=800, res=100)
+
 ggplot(data=data3,aes(x=as.factor(Age_group),y=count, fill=Sugu)) + 
   geom_bar(subset=.(Sugu=="Naine"),aes(y=count,fill="N (ei rahastatud)"),stat="identity") + 
   geom_bar(data=data3f_funded,aes(y=count,fill="N (rahastati)"),stat="identity") + 
@@ -64,8 +67,7 @@ ggplot(data=data3,aes(x=as.factor(Age_group),y=count, fill=Sugu)) +
   theme(panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
         text=element_text(size=16, family="Open Sans"))
 
-
-
+dev.off()
 
 
 
