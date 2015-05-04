@@ -1,0 +1,34 @@
+---
+title: "Bondora laenuandmete analüüs"
+output: html_document
+layout: page
+---
+
+<link href="resources/style.css" rel="stylesheet"></link>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<p id="subtitle">MTMS.01.100 Statistiline andmeteadus ja visualiseerimine</p>
+<p id="author">Taivo Pungas</p>
+
+<!-- Sissejuhatus -->
+Bondora 
+
+
+
+## Millised on Bondora laenajad?
+<img src="figures/pyramid.png" style="" />
+<img src="figures/time_heatmap.svg" style="" />
+
+
+## Kas Bondora laenajad on vaesed või rikkad?
+<img src="figures/salarydist.svg" style="" />
+<img src="figures/salarydist_by_occupation.svg" style="" />
+
+
+## Kas Bondora on efektiivne laenuturg?
+<img src="figures/prop_funded_country.svg" style="" />
+<img src="figures/prop_funded_verification.svg" style="" />
+<img src="figures/prop_funded_language.svg" style="" />
+
+
+IT akadeemia toetas.
