@@ -8,7 +8,7 @@ div.main-container{
 	-webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
-	padding: 20px 50px;
+	padding: 20px 7%;
 	margin: 20px auto;
 }
 
@@ -26,10 +26,16 @@ h2 {
 }
 
 img {
-	width: 455px;
+	width: 100%;
 	display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: 1.5;
+	text-align: justify;
 }
 
 p#subtitle , p#author{
@@ -39,4 +45,32 @@ p#subtitle , p#author{
 
 p#author{
 	font-weight: bold;
+}
+
+footer p {
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+
+table#salarytable {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#salarytable td, table#salarytable th {
+	padding-left: 5px;
+	padding-right: 5px;
+	min-width: 170px;
+}
+
+table#salarytable th {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background-color: #eeeeee;
+	font-weight: bold;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
 }
