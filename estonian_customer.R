@@ -72,10 +72,14 @@ data5 = data %>%
     "Kinnisvara", "Teadustegevus", "Avalik haldus", "Avalik teenistus ja sõjavägi",
     "Haridus", "Tervishoid ja sotsiaalhoolekanne", "Kunst ja meelelahutus",
     "Põllumajandus, metsandus ja kalandus"))) %>%
-  rename(`Keskmine palk`=mean_salary, N=count) %>%
-  select(Tegevusala, `Keskmine palk`, N)
+  mutate(`Keskmine netopalk`=round(mean_salary), Inimesi=count) %>%
+  select(Tegevusala, `Keskmine netopalk`, Inimesi)
 
 data5 # TEHA TABEL
+library(xtable)
+xt = xtable(data5)
+digits(xt) = 0
+print(xt, type = "html", file="figures/salarytable.html", include.rownames=FALSE)
 
 
 # Palkade jaotus tegevusala järgi
@@ -101,7 +105,8 @@ ggplot(data6) +
   xlab("Netopalk, €") +
   theme_bw() +
   theme(panel.grid.minor = element_blank(),
-        text=element_text(size=16, family="Open Sans"), legend.position="none")
+        text=element_text(size=16, family="Open Sans"), legend.position="none",
+        axis.title.x=element_text(vjust=-0.5))
 dev.off()
 
 # Palkade üldine jaotus (Bondorast laenajate hulgas)
@@ -125,9 +130,13 @@ median(data6$Palk)
 
 # Kuidas Eesti inimesed oma maakonda kirjutavad
 maakonnad = data %>%
+  filter(Country=="EE") %>%
   group_by(County) %>%
   summarise(count=n()) %>%
   arrange(desc(count))
 # VILNIUSE maakond :D
+
+maakonnad2 = maakonnad %>%
+  arrange(County)
 
   

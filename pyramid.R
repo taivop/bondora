@@ -15,21 +15,21 @@ data = read.table("data/cleaned.csv")
 data2 = data %>%
   group_by(Age, Gender) %>%
   summarise(count=n()) %>%
-  filter(Age >= 18 & !is.na(Gender) & Gender != 2)
+  filter(Age %in% 18:71 & !is.na(Gender) & Gender != 2)
 
 data2_funded = data %>%
   filter(WasFunded == 1) %>%
   group_by(Age, Gender) %>%
   summarise(count=n()) %>%
-  filter(Age >= 18 & !is.na(Gender) & Gender != 2)
+  filter(Age %in% 18:71 & !is.na(Gender) & Gender != 2)
 
 # Distribute data into buckets
 breaks=c(18, seq(20,100,by=3))
 b = breaks
-breaks[1] = 17 # quick fix
+b[1] = 17 # quick fix
 labels = paste(b[1:length(b)-1]+1,
                  b[2:length(b)],
-                 sep = '...')
+                 sep = '-')
   
 data2f = data2 %>% filter(Gender == "Naine")
 data3f = transform(data2f, Age_group=cut(as.numeric(sub('[%]', '', Age)), labels=labels,
@@ -49,8 +49,7 @@ data3 = rbind(data3f, data3m) %>%
 
 
 # Plotting
-#svg("pyramid.svg")
-png("figures/pyramid.png", width=800, height=800, res=100)
+png("figures/pyramid.png", width=600, height=600, res=80)
 
 ggplot(data=data3,aes(x=as.factor(Age_group),y=count, fill=Sugu)) + 
   geom_bar(subset=.(Sugu=="Naine"),aes(y=count,fill="N (ei rahastatud)"),stat="identity") + 
@@ -65,10 +64,10 @@ ggplot(data=data3,aes(x=as.factor(Age_group),y=count, fill=Sugu)) +
   xlab("Vanusegrupp") + 
   theme_bw() +
   theme(panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
-        text=element_text(size=16, family="Open Sans"))
+        text=element_text(size=16, family="Open Sans"), legend.position="top",
+        axis.title.y=element_text(vjust=1))
 
 dev.off()
-
 
 
 
