@@ -6,29 +6,66 @@ layout: page
 
 <link href="resources/style.css" rel="stylesheet"></link>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<script src="resources/sorttable.js"></script>
 
 <p id="subtitle">MTMS.01.100 Statistiline andmeteadus ja visualiseerimine</p>
-<p id="author">Taivo Pungas</p>
+<p id="author"><a href="http://pungas.ee/minust">Taivo Pungas</a></p>
+<hr>
 
 <!-- Sissejuhatus -->
-Bondora 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis neque sem, et varius ex auctor vitae. Duis ut lacus mi. Sed varius dictum neque non pharetra. Maecenas eget nisi eu mauris tincidunt mollis. Donec lobortis ex quis orci dignissim auctor. In finibus sem ac dolor bibendum dictum. Duis fringilla sem a tempus vehicula. Pellentesque sed nisi leo. Morbi elementum mauris nec commodo convallis. Donec volutpat libero in tellus lacinia, sed rutrum magna hendrerit. Praesent tempor dolor dolor, egestas posuere quam tincidunt at. Donec placerat ut nulla ac tristique. Aenean a egestas eros. Praesent sed risus nibh. Proin id sem euismod, rhoncus ligula ac, faucibus diam. Etiam in felis augue.
 
 
+<hr>
+## Millised inimesed saavad Bondorast laenu?
 
-## Millised on Bondora laenajad?
-<img src="figures/pyramid.png" style="" />
-<img src="figures/time_heatmap.svg" style="" />
+Nii investori kui laenajana on põnev küsimus, kes Bondorast laenu taotlevad ja saavad. Üks kõige lihtsamaid viise sellele ülevaatlikult vastata on rahvastikupüramiidi abil. Kui allolevat graafikut võrrelda <a href="http://www.stat.ee/public/rahvastikupyramiid/">Eesti rahvastikupüramiidiga</a>, siis on näha, et Bondoras on tugevalt üleesindatud mehed ja kuni 50-aastased.
+
+<img src="figures/pyramid.png" style="width: 600px;">
+<img src="figures/time_heatmap.svg" style="">
+
+<hr>
+## Laenajate palgajaotused ja tegevusalad
+Vajuta tulba nime peal, et selle järgi sorteerida.
+
+<!-- Palgatabel -->
+<table id="salarytable" class="sortable" border=1>
+<tr> <th> Tegevusala </th> <th> Keskmine netopalk </th> <th> Inimesi </th>  </tr>
+  <tr> <td> Mäetööstus </td> <td align="right"> 1638 </td> <td align="right"> 149 </td> </tr>
+  <tr> <td> Kinnisvara </td> <td align="right"> 1522 </td> <td align="right"> 385 </td> </tr>
+  <tr> <td> Tervishoid ja sotsiaalhoolekanne </td> <td align="right"> 1488 </td> <td align="right"> 2249 </td> </tr>
+  <tr> <td> Ehitus </td> <td align="right"> 1478 </td> <td align="right"> 2489 </td> </tr>
+  <tr> <td> Transport ja laotöö </td> <td align="right"> 1408 </td> <td align="right"> 2234 </td> </tr>
+  <tr> <td> Teadustegevus </td> <td align="right"> 1398 </td> <td align="right"> 339 </td> </tr>
+  <tr> <td> Energeetika </td> <td align="right"> 1398 </td> <td align="right"> 496 </td> </tr>
+  <tr> <td> Finants- ja kindlustussektor </td> <td align="right"> 1356 </td> <td align="right"> 975 </td> </tr>
+  <tr> <td> Infotehnoloogia ja telekommunikatsioon </td> <td align="right"> 1320 </td> <td align="right"> 1546 </td> </tr>
+  <tr> <td> Avalik teenistus ja sõjavägi </td> <td align="right"> 1301 </td> <td align="right"> 1783 </td> </tr>
+  <tr> <td> Kommunaalmajandus </td> <td align="right"> 1255 </td> <td align="right"> 373 </td> </tr>
+  <tr> <td> Avalik haldus </td> <td align="right"> 1171 </td> <td align="right"> 769 </td> </tr>
+  <tr> <td> Haiglatöö ja toitlustus </td> <td align="right"> 1112 </td> <td align="right"> 2088 </td> </tr>
+  <tr> <td> Jae- või hulgimüük </td> <td align="right"> 1084 </td> <td align="right"> 3022 </td> </tr>
+  <tr> <td> Haridus </td> <td align="right"> 1023 </td> <td align="right"> 1111 </td> </tr>
+  <tr> <td> Muu </td> <td align="right"> 1013 </td> <td align="right"> 8287 </td> </tr>
+  <tr> <td> Kunst ja meelelahutus </td> <td align="right"> 979 </td> <td align="right"> 429 </td> </tr>
+  <tr> <td> Põllumajandus, metsandus ja kalandus </td> <td align="right"> 962 </td> <td align="right"> 849 </td> </tr>
+  <tr> <td> Töötlev tööstus </td> <td align="right"> 952 </td> <td align="right"> 2404 </td> </tr>
+   </table>
 
 
-## Kas Bondora laenajad on vaesed või rikkad?
-<img src="figures/salarydist.svg" style="" />
-<img src="figures/salarydist_by_occupation.svg" style="" />
+<img src="figures/salarydist.svg" style="">
+<img src="figures/salarydist_by_occupation.svg" style="">
 
-
+<hr>
 ## Kas Bondora on efektiivne laenuturg?
-<img src="figures/prop_funded_country.svg" style="" />
-<img src="figures/prop_funded_verification.svg" style="" />
-<img src="figures/prop_funded_language.svg" style="" />
+<img src="figures/prop_funded_country.svg" style="">
+<img src="figures/prop_funded_language.svg" style="">
+
+## Muud põnevad leiud
+Andmete põhjal on näha, et Bondora laseb kasutajatel sisestada maakonna vabatekstina, mitte valida etteantud nimekirjast. Seetõttu elab huvitaval kombel näiteks 4 inimest Eesti maakonnas, 2 inimest Vilniuse maakonnas ja 1 inimene Gorodi maakonnas (<i>город</i> - "linn" vene k.). Huvitav on ka vaadata, kui paljudel viisidel on võimalik ühe maakonna nime valesti kirjutada (Haarju, Hajumaa, Haljumaakond, Harjimaa, Harjumaaa, Harjume, Harjuu, Harumaa, Harjumma, Hrjumaa).
 
 
-IT akadeemia toetas.
+<hr>
+<footer>
+<p>Käesoleva töö valmimist toetas <a href="http://itakadeemia.ee/">IT akadeemia</a> stipendiumiprogramm.</p>
+</footer>

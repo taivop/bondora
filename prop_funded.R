@@ -62,7 +62,8 @@ ggplot(data3) +
   theme_bw() +
   theme(panel.grid.minor = element_blank(),
         text=element_text(size=16, family="Open Sans"), legend.position="none") +
-  facet_wrap(~ Country)
+  facet_wrap(~ Country) +
+  scale_fill_manual(values=c("#225db9", "#d7c30c", "#aaaaaa", "#a60e1d"))
 dev.off()
 
 
@@ -99,7 +100,7 @@ ggplot(data4) +
   theme(panel.grid.minor = element_blank(),
         text=element_text(size=16, family="Open Sans"), legend.position="none") +
   facet_wrap(~ Language) +
-  scale_colour_brewer(palette="Set1")
+  scale_fill_brewer(palette="Set1")
 dev.off()
 
 # RESULT: biases in investors? Why don't Spanish high-rated lenders get as much money as in Estonia? Interest rate should cover this issue, right?
