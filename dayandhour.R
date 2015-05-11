@@ -8,7 +8,8 @@ library(extrafont)
 library(grid)
 
 
-data = read.table("data/cleaned.csv") 
+data = read.table("data/cleaned.csv") %>%
+  filter(Country=="EE")
 
 weekday_labels = c("E", "T", "K", "N", "R", "L", "P")
 

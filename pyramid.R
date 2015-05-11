@@ -10,7 +10,9 @@ library(extrafont)
 #font_import(pattern="[O/o]pen")
 #loadfonts(device="win")
 
-data = read.table("data/cleaned.csv") 
+data = read.table("data/cleaned.csv") %>%
+  filter(Country=="EE")
+  
 
 data2 = data %>%
   group_by(Age, Gender) %>%
