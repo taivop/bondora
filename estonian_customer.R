@@ -6,58 +6,13 @@ library(reshape2)
 library(RColorBrewer)
 library(extrafont)
 
+### estonian_customer.R: do analyses on Estonian customers
 
 data = read.table("data/cleaned.csv") %>%
   filter(Country=="EE")
 
-# Küsitud raha
-data2 = data %>%
-  filter(AppliedAmount < 12000) # Kolm outlierit: 40k, 40k, 20k
 
-ggplot(data2) +
-  geom_bar(aes(x=AppliedAmount))
-
-
-# Inimese võlad selle järgi, kuidas ta plaanib laenu kasutada
-data3 = data %>%
-  mutate(TotalNumDebts=as.numeric(levels(TotalNumDebts)[TotalNumDebts])) %>%
-  filter(TotalNumDebts < 15, UseOfLoan %in% 0:8) %>%
-  mutate(UseOfLoanString = mapvalues(UseOfLoan, from=0:8, to=c(
-    "Laenude konsolideerimine",
-    "Kinnisvara",
-    "Koduremont",
-    "Ettevõtlus",
-    "Haridus",
-    "Reisimine",
-    "Sõiduk",
-    "Muu",
-    "Tervishoid")))
-
-ggplot(data3) +
-  geom_bar(aes(x=TotalNumDebts)) +
-  facet_wrap(~ UseOfLoanString, scales="free")
-
-
-# Inimese haridustase vs kuidas plaanib laenu kasutada
-data4 = data %>%
-  filter(UseOfLoan %in% 0:8) %>%
-  mutate(UseOfLoanString = mapvalues(UseOfLoan, from=0:8, to=c(
-    "Laenude konsolideerimine",
-    "Kinnisvara",
-    "Koduremont",
-    "Ettevõtlus",
-    "Haridus",
-    "Reisimine",
-    "Sõiduk",
-    "Muu",
-    "Tervishoid")))
-
-ggplot(data4) +
-  geom_bar(aes(x=education_id)) +
-  facet_wrap(~ UseOfLoanString, scales="free")
-
-
-# Keskmine palk töövaldkonna järgi
+# Mean salary by occupation
 data5 = data %>%
   filter(occupation_area %in% 1:19) %>%
   group_by(occupation_area) %>%
@@ -75,14 +30,14 @@ data5 = data %>%
   mutate(`Keskmine netopalk`=round(mean_salary), Inimesi=count) %>%
   select(Tegevusala, `Keskmine netopalk`, Inimesi)
 
-data5 # TEHA TABEL
+# Table of mean salaries
 library(xtable)
 xt = xtable(data5)
 digits(xt) = 0
 print(xt, type = "html", file="figures/salarytable.html", include.rownames=FALSE)
 
 
-# Palkade jaotus tegevusala järgi
+# Salary distributions by occupation
 data6 = data %>%
   filter(occupation_area %in% 1:19) %>%
   mutate(Tegevusala = mapvalues(occupation_area, from=1:19, to=c(
@@ -109,7 +64,7 @@ ggplot(data6) +
         axis.title.x=element_text(vjust=-0.5))
 dev.off()
 
-# Palkade üldine jaotus (Bondorast laenajate hulgas)
+# Salary distribution of all Bondora lenders from Estonia
 
 svg("figures/salarydist.svg",width=10,height=6)
 ggplot(data6) +
@@ -123,18 +78,17 @@ ggplot(data6) +
         text=element_text(size=16, family="Open Sans"), legend.position="none")
 dev.off()
 
-# Keskmine ja mediaan
+# Mean and median
 mean(data6$Palk)
 median(data6$Palk)
   
 
-# Kuidas Eesti inimesed oma maakonda kirjutavad
+# How Estonian people write their counties
 maakonnad = data %>%
   filter(Country=="EE") %>%
   group_by(County) %>%
   summarise(count=n()) %>%
   arrange(desc(count))
-# VILNIUSE maakond :D
 
 maakonnad2 = maakonnad %>%
   arrange(County)

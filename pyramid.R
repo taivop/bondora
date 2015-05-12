@@ -50,7 +50,7 @@ data3 = rbind(data3f, data3m) %>%
   rename(Sugu=Gender)
 
 
-# Plotting
+# Plot
 png("figures/pyramid.png", width=600, height=600, res=80)
 
 ggplot(data=data3,aes(x=as.factor(Age_group),y=count, fill=Sugu)) + 

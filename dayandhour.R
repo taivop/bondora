@@ -7,6 +7,7 @@ library(RColorBrewer)
 library(extrafont)
 library(grid)
 
+# dayandhour.R: plot loan activity on a heatmap by day and hour
 
 data = read.table("data/cleaned.csv") %>%
   filter(Country=="EE")

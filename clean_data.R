@@ -4,6 +4,7 @@ library(tidyr)
 library(ggplot2)
 library(reshape2)
 
+### clean_data.R: Import the data, rename some values and save result into file
 
 
 data = read.table("data/LoanData.csv", header=TRUE, sep=";", quote="") %>%
