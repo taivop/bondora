@@ -20,26 +20,26 @@ Kasutatud andmed laadisin Bondorast alla 23. märtsil 2015, analüüsiks kasutat
 <hr>
 ## Millised inimesed saavad Bondorast laenu?
 
-Nii investori kui laenajana on põnev küsimus, kes Bondorast laenu taotlevad ja saavad. Üks kõige lihtsamaid viise sellele ülevaatlikult vastata on rahvastikupüramiidi abil. Alloleval püramiidil on kõik Bondora laenajad, kelle asukohariigiks on märgitud Eesti.
+Nii investori kui laenajana on põnev küsimus, kes Bondorast laenu taotlevad ja saavad. Üks kõige lihtsamaid viise sellele ülevaatlikult vastata on rahvastikupüramiidi abil. Alloleval püramiidil on kõik Bondora laenajad, kelle asukohariigiks märgitud Eesti.
 
 <img src="figures/pyramid.png" style="width: 600px;">
 
-Kui ülalolevat graafikut võrrelda <a href="http://www.stat.ee/public/rahvastikupyramiid/">Eesti rahvastikupüramiidiga</a>, siis on näha, et Bondoras on üleesindatud noored kuni ~50-aastased. Eriti teravalt jääb aga silma meeste ja naiste jaotuste erinevus -- noored (<40) mehed laenavad suhteliselt palju ja vanemad mehed juba oluliselt vähem, samas naiste puhul on üleminek tunduvalt sujuvam. Üle 40-aastaste hulgas on suurem osa laenajatest juba naised, mitte mehed. Selles mängib ilmselt osa fakt, et naiste eluiga on keskmiselt pikem ja eakamate hulgas on naised ülekaalus.
+Kui ülalolevat graafikut võrrelda <a href="http://www.stat.ee/public/rahvastikupyramiid/">Eesti rahvastikupüramiidiga</a>, siis on näha, et Bondoras on üleesindatud kuni ~50-aastased. Eriti teravalt jääb aga silma meeste ja naiste jaotuste erinevus -- noored (<40) mehed laenavad suhteliselt palju ja vanemad mehed juba oluliselt vähem, samas naiste puhul on üleminek tunduvalt sujuvam. Üle 40-aastaste hulgas on suurem osa laenajatest juba naised, mitte mehed. Selles mängib ilmselt osa fakt, et naiste eluiga on keskmiselt pikem ja eakamate hulgas on naised ülekaalus.
 
 Huvitav on ka, et vanuses 18 kuni 20 väga palju Bondorast ei laenata. Selles, kui suur osa taotlustest rahuldatakse, ei tundu silma järgi sugude ja vanusegruppide vahel väga suurt erinevust olevat.
 
-Teame nüüd, et Bondora laenajad on soo ja vanuse poolest suhteliselt sarnased Eesti läbilõikega, aga kas saame midagi öelda ka nende harjumuste kohta? Võib-olla on laenajad ööloomad (esitades laenutaotlusi öösiti) või peoloomad (esitades laenutaotlusi reedeõhtuti)? Selle uurimiseks vaatame, kuidas jagunevad Eesti laenutaotlused nädalapäeva ja kellaaja lõikes.
+Teame nüüd, et Bondora laenajad on soo ja vanuse poolest suhteliselt sarnased Eesti vastava läbilõikega, aga kas saame midagi öelda ka nende harjumuste kohta? Võib-olla on laenajad ööloomad (esitades laenutaotlusi öösiti) või peoloomad (esitades laenutaotlusi reede hilisõhtuti)? Selle uurimiseks vaatame, kuidas jagunevad Eesti laenutaotlused nädalapäeva ja kellaaja lõikes.
 
 <img src="figures/time_heatmap.svg" style="">
 
-Tuleb välja, et kõige aktiivsemalt taotletakse laenu tööpäevade hommikul ja lõunal ja taotlemine jätkub hilisõhtusse, sumbudes alles kella 1-ks öösel. Üks võimalik seletus on, et laenuvõtjad on tihti töötud, aga tõenäolisem tundub, et taotlus tehakse lihtsalt tööajal (eeldame siin, et enamik inimesi töötab vahemikus 9-17). Ei ööloomade ega peoloomade hüpotees ei leidnud kinnitust - öösiti on väga vähe laenutaotlusi ja reede õhtul samuti mitte.
+Tuleb välja, et kõige aktiivsemalt taotletakse laenu tööpäevade hommikul ja lõunal ja taotlemine jätkub hilisõhtusse, sumbudes alles kella üheks öösel. Üks võimalik seletus on, et laenuvõtjad on tihti töötud, aga tõenäolisem tundub, et taotlus tehakse lihtsalt tööajal (eeldan siin, et enamik inimesi töötab vahemikus 9-17). Ei ööloomade ega peoloomade hüpotees ei leidnud kinnitust - öösiti on väga vähe laenutaotlusi ja reedel peoks valmistudes samuti mitte.
 
 Veider muster on madal laenuaktiivsus nädalavahetustel: intuitiivselt võiks arvata, et just laupäeval-pühapäeval on rohkem aega rahaasjadega tegeleda. Samas võib nädalavahetus olla just aeg, mil argimuredest rahu saada ja korralikult puhata.
 
 <hr>
 ## Laenajate palgajaotused ja tegevusalad
 
-Kuna Bondora kogub krediidiriski arvutamiseks andmeid ka inimeste sissetulekute kohta, oleks patt jätta need analüüsimata. Allpool on toodud Bondora Eesti laenajate palgajaotus. Vertikaalne pidev joon tähistab mediaanpalka (690€) ja kriipsjoon keskmist palka (787€). Siinkohal on oluline tähele panna, (a) tegu on NETOpalgaga (maksud on juba maha arvestatud), (b) andmed on kogutud üle mitme aasta ja ei ole inflatsiooniga kohandatud (kuigi inflatsiooni efekt sellele jaotusele ei tohiks väga suur olla), (c) kõik need palganumbrid ei ole dokumentidega tõestatud ja laenajatel võib olla põhjust valetada oma palk tegelikust suuremaks ja (d) graafikutel on kujutatud ainult alla 4000-euroseid palku.
+Kuna Bondora kogub krediidiriski arvutamiseks andmeid ka inimeste sissetulekute kohta, oleks patt jätta need analüüsimata. Allpool on toodud Bondora Eesti laenajate palgajaotus. Vertikaalne pidev joon tähistab mediaanpalka (690€) ja kriipsjoon keskmist palka (787€). Siinkohal on oluline tähele panna, et (a) tegu on NETOpalgaga (maksud on juba maha arvestatud), (b) andmed on kogutud üle mitme aasta ja ei ole inflatsiooniga kohandatud (kuigi inflatsiooni efekt selle jaotuse kujule ei tohiks väga suur olla), (c) kõik need palganumbrid ei ole dokumentidega tõestatud ja laenajatel võib olla põhjust valetada oma palk tegelikust suuremaks ja (d) graafikutel on kujutatud ainult alla 4000-euroseid palku.
 
 <img src="figures/salarydist.svg" style="">
 
@@ -47,8 +47,9 @@ Ma ei leidnud internetist head Eesti palgajaotuse graafikut, seega võrdlust ül
 
 * Mediaanpalga ja keskmise palga vahe on pea 100€. Sageli räägitakse meedias keskmisest palgast, mis esindavat justkui keskmist inimest, aga see on jaotuse pika saba tõttu petlikult suur.
 * Minu jaoks üllatavalt palju leidub inimesi, kes saavad kätte alla 500€.
+* Samuti on üllatav üle 2000-eurose netopalgaga laenajate hulk - nende rahavoogu arvestades ei tohiks Bondora väikesed laenud (kuni 10000€) väga suurt rolli mängida.
 
-Üldist palgajaotust saame veel täpsemalt uurida tegevusala kaupa. Allolevas tabelis on toodud keskmised palgad (ja laenajate arv) tegevusala kaupa ning joonisel kujutatud vastavad palgajaotused. Jooniselt (aga mitte tabelist) on välja jäetud mäetööstus, kuna seal oli andmeid väga vähe.
+Üldist palgajaotust saame veel täpsemalt uurida tegevusala kaupa. Allolevas tabelis on toodud keskmised palgad (ja laenajate arv) tegevusala kaupa ning joonisel kujutatud vastavad palgajaotused. Jooniselt (aga mitte tabelist) on välja jäetud mäetööstus, kuna sel alal töötavaid laenajaid oli väga vähe.
 
 
 <!-- Palgatabel -->
@@ -87,13 +88,13 @@ Mõned üllatused leiduvad siingi:
 <hr>
 ## Kas Bondora on efektiivne laenuturg?
 
-Teoreetiliselt võiks laenuturg toimida nii, et igale laenutaotlusele määratakse parajasti selline krediidiskoor ja intress, et investorid tahaksid seda rahastada. Erinevatel põhjustel - nt investorid tahavad kõrget riski vältida, krediidiskoori ja intressi määramise algoritm ei ole väga hea - ei pruugi see väide kehtida. Alloleval joonisel on näidatud erinevate riikide jaoks rahuldatud taotluste osakaal igas krediidigrupis.
+Teoreetiliselt võiks laenuturg toimida nii, et igale laenutaotlusele määratakse parajasti selline krediidiskoor ja intress, et investorid tahaksid seda rahastada. Erinevatel põhjustel - nt investorid tahavad kõrget riski vältida või krediidiskoori ja intressi määramise algoritm ei ole väga hea - ei pruugi see väide kehtida. Alloleval joonisel on näidatud erinevate riikide laenajate kohta rahuldatud taotluste osakaal igas krediidigrupis.
 
 <img src="figures/prop_funded_country.svg" style="">
 
 Minimaalselt võiks olla nii, et kõrgema skoori (s.t. madalama riskiga) laene rahastatakse rohkem, kuna investorid on riskialtid. Järgneval joonisel seda Eesti puhul ka näeme. Samas on teiste riikide puhul tendents teistpidine (osad riigid on andmete vähesuse tõttu joonistamata jäetud). Spekuleerin, et kehtib üks kahest väitest:
 
-<b>A.</b> Bondora ei ole efektiivne laenuturg (s.t. ei määra täpseid krediidiskoore ja intressimäärasid).
+<b>A.</b> Bondora ei ole efektiivne laenuturg (s.t. ei määra sobivaid krediidiskoore ja intressimäärasid).
 
 <b>B.</b> Bondora investorid on mingil põhjusel kallutatud ja seetõttu "jätavad raha lauale" (ei teeni nii suurt tootlust, kui võiks).
 
