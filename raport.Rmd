@@ -5,6 +5,7 @@ layout: page
 
 <link href="resources/style.css" rel="stylesheet"></link> 
 <script src="resources/sorttable.js"></script>
+<script src="resources/ga.js"></script>
 
 # Bondora laenuandmete analüüs
 
