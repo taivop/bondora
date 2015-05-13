@@ -1,5 +1,28 @@
+body {
+	font-family: "Open Sans";
+	background-color: #eeeeee;
+}
+
+div.main-container{
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+	padding: 20px 7%;
+	margin: 20px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans Semibold";
+}
+
 h1 {
+	letter-spacing: -2px;
 	text-align: center;
+}
+
+h2 {
+	letter-spacing: -2px;
 }
 
 img {
@@ -22,10 +45,6 @@ p#subtitle , p#author{
 
 p#author{
 	font-weight: bold;
-}
-
-footer {
-	margin-bottom: 20px;
 }
 
 footer p {
