@@ -5,4 +5,4 @@ Code for cleaning public [Bondora lender data](https://www.bondora.co.uk/en/inve
 Probably the most reusable script here is [clean_data.R](https://github.com/taivop/bondora/blob/master/clean_data.R) that cleans the original data a little bit. Note that you need to convert the XLSX file provided by Bondora to a CSV file to use the script.
 
 
-This work is licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).
+This work is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
